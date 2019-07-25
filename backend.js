@@ -18,16 +18,14 @@ exports.verifyEmails = (req, res) => {
         let params = {
             EmailAddress: email,
 		};
-		console.log(params);
         ses.verifyEmailIdentity(params, (err, data) => {
             if (err) console.log(err, err.stack);
-			else {console.log(data); return res;}
+			else console.log(data);
         });
     });
 }
 
 exports.sendEmail = (req, res) => {
-    console.log("sending emails");
     let params = {
         Destination: {
             CcAddresses: [],
