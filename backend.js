@@ -12,9 +12,7 @@ const SESConfig = {
 exports.verifyEmails = (req, res) => {
     let ses = new AWS.SES({apìVersion: '2010-12-01'});
     let emails = [
-        'mendezjuanfelipe7@gmail.com',
-        'mateo.jimenez.leon@gmail.com',
-        'santiacor14@gmail.com',
+        '//EMAILS TO VERIFY',
     ];
     emails.forEach(email => {
         let params = {
