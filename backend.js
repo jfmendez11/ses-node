@@ -10,7 +10,7 @@ const SESConfig = {
 };
 
 exports.verifyEmails = (req, res) => {
-    let ses = new AWS.SES({apìVersion: '2010-12-01'});
+    let ses = new AWS.SES(SESConfig);
     let emails = [
         '//EMAILS TO VERIFY',
     ];
