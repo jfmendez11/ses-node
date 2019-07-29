@@ -25,9 +25,7 @@ app.get('/API/verifyEmails', (req, res) => {
   backend.verifyEmails(req, res);
 });
 
-app.get('/API/sendEmail', (req, res) => {
-  backend.sendEmail(req, res);
-});
+backend.cronEmail();
 
 // error handler
 app.use((err, req, res, next) => {
